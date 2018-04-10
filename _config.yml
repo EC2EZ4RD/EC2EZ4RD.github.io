@@ -11,7 +11,7 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
+text_color_theme: forest #eg: default | dark | forest | ocean | chocolate | orange
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /
@@ -49,7 +49,7 @@ author:
   # twitter:  #your Twitter username
   github:  ec2ez4rd #your GitHub username
   # googleplus:  #your Google+ username
-  weibo:  ex2ez4rd #your Weibo username
+  weibo:  2429275097 #your Weibo username
   # douban:  #your Douban username
   # linkedin:  #your Linkedin username
 
@@ -76,9 +76,9 @@ gitalk:
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
-  # app_id:  #LeanCloud App id
-  # app_key:  #LeanCloud App key
-  # app_class:  #LeanCloud App class
+  app_id: zI3b8WmJ59wRgpKWoF2vVg5i-gzGzoHsz #LeanCloud App id
+  app_key: fGn2OaPfnQUppRaq1C9kY5tA #LeanCloud App key
+  app_class: Counter #LeanCloud App class
 
 mathjax: true
 mathjax_autoNumber: true
