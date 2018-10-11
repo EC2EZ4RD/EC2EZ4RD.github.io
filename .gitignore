@@ -3,6 +3,8 @@
 .AppleDouble
 .LSOverride
 
+
+
 # Thumbnails
 ._*
 
@@ -179,9 +181,7 @@ build-iPhoneSimulator/
 
 # jekyll
 Gemfile.lock
-Todo.md
+package-lock.json
 _site/
-test/
-screenshots/
 .sass-cache/
 .jekyll-metadata

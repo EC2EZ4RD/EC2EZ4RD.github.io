@@ -1,19 +1,19 @@
-var gulp = require('gulp');
-var rename = require('gulp-rename');
-var svg2png = require('gulp-svg2png');
-var ico = require('gulp-to-ico');
+const gulp = require('gulp');
+const rename = require('gulp-rename');
+const svg2png = require('gulp-svg2png');
+const ico = require('gulp-to-ico');
 
-var iconBasename = 'icon';
-var iconDestPath = './assets/images/logo';
-var faviconDestPath = './';
+const iconBasename = 'icon';
+const iconDestPath = './statics/images/logo';
+const faviconDestPath = './';
 
 function coverSvg(width, height) {
     height || (height = width);
-    return gulp.src('./assets/images/logo/logo.svg')
+    return gulp.src('./statics/images/logo/logo.svg')
         .pipe(svg2png({ width: width, height: height }))
         .pipe(rename({
             basename: iconBasename,
-            suffix: '-' + width + 'x' + height
+            suffix: `-${width}x${height}`
         }))
         .pipe(gulp.dest(iconDestPath));
 }
@@ -57,9 +57,9 @@ gulp.task('icon16', function() {
 
 gulp.task('favicon', ['icon128', 'icon48', 'icon16'], function() {
     return gulp.src([
-        iconDestPath + '/icon-128x128.png',
-        iconDestPath + '/icon-48x48.png',
-        iconDestPath + '/icon-16x16.png'])
+        `${iconDestPath}/icon-128x128.png`,
+        `${iconDestPath}/icon-48x48.png`,
+        `${iconDestPath}/icon-16x16.png`])
             .pipe(ico({ path: 'favicon.ico'}))
             .pipe(gulp.dest(faviconDestPath));
 });

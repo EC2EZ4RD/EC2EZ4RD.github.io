@@ -1,30 +1,26 @@
 ---
-title: Welcome
-excerpt: Rundong | 润东
+layout: base
+title: EC2EZ4RD
+excerpt: EC2EZ4RD | EC2EZ4RD
 ---
-<!DOCTYPE html>
-<html lang="{{ site.lang }}">
-    <head>
-        {% include common-head.html %}
-        {% include head-icons-rel.html %}
-        <link rel="stylesheet" href="{{ "/assets/css/home.css" | prepend: site.baseurl | replace:'//','/' }}">
-        <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <div class="home" itemscope itemtype="http://schema.org/Person">
-            <div class="main">
-                <div class="content">
-                    <div class="my-photo">
-                        <img alt="my photo" src="http://wx2.sinaimg.cn/large/90cbcbd9ly1fq4lmavbacj229v29ukjl.jpg" />
-                    </div>
-                    <h1 itemprop="name" class="title-text">{{ site.author.name }}</h1>
-                    {% include components/follow-me.html %}
-                    <p><a class="social-link blog" title="Visit my blog." itemprop="sameAs" href="/blog" target="_self">Visit My Blog</a></p>
-                </div>
-            </div>
-        </div>
-        {% if site.isdebug == false %}
-            {% include utils/google-analytics.html %}
-        {% endif %}
-    </body>
-</html>
+
+{%- if site.author.type == 'organization' -%}
+  {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
+{%- else -%}
+  {%- assign _author_itemtype = 'http://schema.org/Person' -%}
+{%- endif -%}
+
+<div itemscope itemtype="{{ _author_itemtype }}" class="layout--author">
+  <div class="main">
+    <div class="content">
+      <div class="my-photo">
+        <img itemprop="image" alt="my photo" src="http://wx2.sinaimg.cn/large/90cbcbd9ly1fq4lmavbacj229v29ukjl.jpg" />
+      </div>
+      <h1 itemprop="name" class="title-text">{{ site.author.name }}</h1>
+      {% include author-links.html author=site.author %}
+      <p><a itemprop="url" class="social-link blog" title="Visit my blog." href="/blog" target="_self">Visit My Blog</a></p>
+    </div>
+  </div>
+</div>
+<script>{%- include scripts/common.js -%}</script>
+{% include analytics.html %}

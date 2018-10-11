@@ -1,5 +1,7 @@
-# EC2EZ4RD.github.io
+# tianqi.name
 
-My personal site
+My Personal Website:
 
-Powered by [Jekyll](https://jekyllrb.com/) & [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme).
+Visit => [tianqi.name](https://tianqi.name).
+
+Powered by [Jekyll](http://jekyllrb.com/) & [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme).

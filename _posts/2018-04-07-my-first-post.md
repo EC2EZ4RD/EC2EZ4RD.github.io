@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: article
 title: 关于此博客
 key: 20180407
 tags:
   - 随笔
-lang: zh-Hans
+date: 2017-04-07 23:00:00 +08:00
 ---
 
 ## 源起
